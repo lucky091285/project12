@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="user-info__button_edit">Edit</button>
+        </div>
+        <button class="button button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <!-- Пример вёрстки карточки: -->
+
+      <!--<div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <button class="place-card__like-icon"></button>
+        </div>
+      </div> -->
+
+      <!-- конец примера. -->
+
+    </div>
+
+    <div class="popup" id="bigImage">
+        <div class="popup__content-image">
+          <img src="./images/close.svg" alt="" id="closeImage" class="popup__close">
+          <img src="https://images.unsplash.com/photo-1559596626-2816c9cf5af1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" class="popup__image" style="max-height: 80vh; max-width: 80vw">
+        </div>
+      </div>
+
+    <div class="popup" id="place">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id="closeCard" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form id="form1" class="popup__form" name="new">
+            <div class="input-container">
+            <input id="placename" required type="text" name="placename" class="popup__input popup__input_type_name" placeholder="Название">
+            <span id="error-placename" class="error-message error-message__hidden"></span>
+            </div>
+            <div class="input-container">
+            <input id="placelink" required type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <span id="error-placelink" class="error-message error-message__hidden"></span>
+            </div>
+            <button id="submit1" type="submit" class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="profile">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id="closeProfile" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form id="form2" class="popup__form" name="old">
+            <div class="input-container">
+            <input id="username" required type="text" name="username" class="popup__input popup__input_type_name" placeholder="Имя">
+            <span id="error-username" class="error-message"></span>
+            </div>
+            <div class="input-container">
+            <input id="userjob" required type="text" name="userjob" class="popup__input popup__input_type_link-url" placeholder="О себе">
+            <span id="error-userjob" class="error-message error-message__hidden"></span>
+            </div>
+            <button id="submit2" type="submit" class="button popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="avatar">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id="closeAvatar" class="popup__close">
+        <h3 class="popup__title">Сменить аватар</h3>
+        <form id="form3" class="popup__form" name="avat">
+          <div class="input-container">
+            <input id="picavatar" required type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар">
+            <span id="error-picavatar" class="error-message error-message__hidden"></span>
+            </div>
+            <button id="submit3" type="submit" class="button popup__button">Сменить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

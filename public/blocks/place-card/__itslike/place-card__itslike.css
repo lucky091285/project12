@@ -1,0 +1,17 @@
+.place-card__itslike {
+    width: 9px;
+    height: 13px;
+    left: 440px;
+    top: 770px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .3s linear;
+
+    color: #000000;
+}
