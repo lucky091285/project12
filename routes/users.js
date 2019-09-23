@@ -5,6 +5,10 @@ usersRouter.get('/', (req, res)=> {
   res.send(users);
 });
 
+usersRouter.patch('/:name', (req, res)=> {
+  res.send(users);
+});
+
 usersRouter.get('/:id', (req, res) => {
   const idin  = req.params.id;
   const user = users.find(user => user._id === idin);

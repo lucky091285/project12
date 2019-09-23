@@ -489,7 +489,7 @@ openProfile() {
       // Изменение профиля
 
 editProfile() {
-  fetch(`users`, {
+  fetch(`users/Douglas Engelbart`, {
     method: 'PATCH',
     headers: this.headers,
     body: JSON.stringify({
@@ -498,10 +498,12 @@ editProfile() {
 
     })
   })
-  .then(res => res.json())
+  .then(res => {
+    res.json();
+    console.log(res);
+  })
   .then(() => {
     renderLoading(true);
-    console.log(renderLoading)
   })
   .catch((err) => {
     console.log('Ошибка. Запрос не выполнен: ', err);
